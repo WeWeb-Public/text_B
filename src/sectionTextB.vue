@@ -44,21 +44,26 @@ export default {
     created() {
         this.section.data = this.section.data || {}
 
-        if (!this.section.data.background)
-            this.section.data.background = wwLib.wwObject.getDefault({ type: 'ww-color' });
-        
-        if (!this.section.data.title)
-            this.section.data.title = wwLib.wwObject.getDefault({ type: 'ww-text' });
-        
-        if (!this.section.data.subtitle1)
-            this.section.data.subtitle1 = wwLib.wwObject.getDefault({ type: 'ww-text' });
-        
-        if (!this.section.data.subtitle2)
-            this.section.data.subtitle2 = wwLib.wwObject.getDefault({ type: 'ww-text' });
-        
-        if (!this.section.data.subtitle3)
-            this.section.data.subtitle3 = wwLib.wwObject.getDefault({ type: 'ww-text' });
-
+        if (!this.section.data.background) {
+            this.section.data.background = wwLib.wwObject.getDefault({ 
+                type: 'ww-image',
+                data: {
+                    url: 'http://cdn.wewebapp.io/public/images/weweb-wp.png'
+                }
+            });
+        }
+        if (!this.section.data.title) {
+            this.section.data.title = wwLib.wwObject.getDefault({ type: 'ww-text', data: { color: 'white' } });
+        }
+        if (!this.section.data.subtitle1) {
+            this.section.data.subtitle1 = wwLib.wwObject.getDefault({ type: 'ww-text', data: { color: 'white' } });
+        }
+        if (!this.section.data.subtitle2) {
+            this.section.data.subtitle2 = wwLib.wwObject.getDefault({ type: 'ww-text', data: { color: 'white' } });
+        }
+        if (!this.section.data.subtitle3) {
+            this.section.data.subtitle3 = wwLib.wwObject.getDefault({ type: 'ww-text', data: { color: 'white' } });
+        }
         this.sectionCtrl.update(this.section);
     },
     methods: {}
