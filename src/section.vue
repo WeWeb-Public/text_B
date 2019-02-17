@@ -3,9 +3,7 @@
         <!-- wwManager:start -->
         <wwSectionEditMenu v-bind:sectionCtrl="sectionCtrl"></wwSectionEditMenu>
         <!-- wwManager:end -->
-
         <wwObject class="background" v-bind:ww-object="section.data.background" ww-category="background"></wwObject>
-
         <div class="container">
             <div class="section-padding">
                 <div class="row">
@@ -14,7 +12,6 @@
                             <wwObject v-bind:ww-object="section.data.title"></wwObject>
                         </h1>
                     </div>
-
                     <div class="subtitle-container">
                         <wwObject class="subtitle" v-bind:ww-object="section.data.subtitle1"></wwObject>
                         <wwObject class="subtitle" v-bind:ww-object="section.data.subtitle2"></wwObject>
@@ -23,13 +20,12 @@
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
 <script>
 export default {
-    name: "text_B",
+    name: "__COMPONENT_NAME__",
     props: {
         sectionCtrl: Object
     },
